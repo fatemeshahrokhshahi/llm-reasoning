@@ -44,8 +44,8 @@ rules = ["MP", "MT", "AC", "DA", "CONV", "INV", "AS", "CT", "CMP",
 conditions = ["chain_of_logic", "chain_of_thought", "few-shot", "zero-shot"]
 
 # Directory paths
-data_dir = r"C:\Users\Lenovo\Desktop\Rule ML+RR\conditional and modal reasoning in LLMs\Test\data"
-output_dir = r"C:\Users\Lenovo\Desktop\Rule ML+RR\conditional and modal reasoning in LLMs\Test\first-results"
+data_dir = r""
+output_dir = r""
 
 # Create output directory if it doesn't exist
 os.makedirs(output_dir, exist_ok=True)
