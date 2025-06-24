@@ -531,12 +531,12 @@ def test_single_prompt(model_config, rule_name, prompt_number, prompt_text, syst
 
 def main():
     """Main function to test all models and rules"""
-    base_path = r"C:\Users\Lenovo\Desktop\Rule ML+RR\conditional and modal reasoning in LLMs\Test"
+    base_path = r""
     method_name = "chain_of_logic"  # or "chain_of_thought"
     
     # Load all prompts from files
     rules_to_test = ["MP", "MT", "AC", "DA", "CONV", "INV", "AS", "CT", "CMP", "DSmu", "DSmi", "MTmu", "MTmi", "MuDistOr", "MiAg", "NSFC"]
-    prompts_base_path = r"C:\Users\Lenovo\Desktop\Rule ML+RR\conditional and modal reasoning in LLMs\llm-logic-main\llm-logic-main\prompts"
+    prompts_base_path = r""
     
     all_prompts = {}
     for rule_name in rules_to_test:
