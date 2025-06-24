@@ -9,7 +9,7 @@
 
 ### Abstract
 
-This repository contains the experimental implementation and comprehensive analysis for evaluating the Chain of Logic prompting method on conditional and modal reasoning tasks. We extend the experimental framework originally established by Holliday et al. (2024) by implementing and systematically evaluating the Chain of Logic prompting method introduced by Servantez et al. (2024) across 16 logical inference patterns from the conditional and modal reasoning benchmark.
+This repository contains the experimental implementation and comprehensive analysis for evaluating the Chain of Logic prompting method on conditional and modal reasoning tasks. After conducting extensive research on rule-based reasoning approaches and identifying limitations in existing methods, we discovered the Chain of Logic methodology introduced by Servantez et al. (2024) for legal reasoning. Since no implementation was available, we developed a complete implementation from scratch based on their paper description and extended it to conditional and modal reasoning tasks. We then systematically evaluated this implementation using the experimental framework originally established by Holliday et al. (2024) across 16 logical inference patterns from the conditional and modal reasoning benchmark.
 
 ### Key Findings
 
@@ -52,7 +52,7 @@ llm-reasoning/
 
 ### Experimental Framework
 
-This work builds upon the experimental framework established by Holliday et al. (2024) for evaluating conditional and modal reasoning in large language models. We extend their methodology by implementing the Chain of Logic prompting method and comparing it against their baseline approaches.
+This work builds upon the experimental framework established by Holliday et al. (2024) for evaluating conditional and modal reasoning in large language models. Through extensive research on rule-based reasoning approaches, we identified the Chain of Logic methodology introduced by Servantez et al. (2024) for legal reasoning tasks. Since the original paper provided only the theoretical framework without any available implementation, we developed a complete implementation from scratch based on their methodology description. We then extended this implementation to the domain of conditional and modal reasoning, comparing it against established baseline approaches.
 
 #### Models Evaluated
 - Llama 3.1 Instruct 8B
@@ -185,7 +185,7 @@ Each JSON file contains:
 
 ### Chain of Logic Methodology
 
-The Chain of Logic method implements a structured 6-step reasoning process:
+The Chain of Logic method implements a structured 6-step reasoning process originally introduced by Servantez et al. (2024) for legal reasoning tasks. Since no implementation was available from the original paper, we developed our own complete implementation based on their methodology description and adapted it specifically for conditional and modal logical reasoning:
 
 1. **Structured Input** - Identify premises and question clearly
 2. **Rule Decomposition** - Break down logical components
@@ -194,7 +194,7 @@ The Chain of Logic method implements a structured 6-step reasoning process:
 5. **Element Recomposition** - Combine logical elements
 6. **Resolve Expression** - Reach final conclusion
 
-Each logical rule has a specialized system prompt that guides the model through this process while incorporating rule-specific logical principles.
+Each logical rule has a specialized system prompt that guides the model through this process while incorporating rule-specific logical principles. Our implementation extends the original legal domain approach to fundamental logical reasoning patterns including conditional statements, modal operators (necessity and possibility), and their combinations.
 
 ### Experimental Results
 
@@ -244,6 +244,8 @@ This work extends the experimental framework from:
 
 The Chain of Logic prompting method was originally introduced by:
 - Servantez, S., Barrow, J., Hammond, K., Jain, R. "Chain of Logic: Rule-Based Reasoning with Large Language Models." ACL 2024.
+
+**Important Note**: The original Chain of Logic paper focused on legal reasoning tasks and did not provide any implementation code. Our work represents the first complete implementation of the Chain of Logic methodology, developed independently from scratch based on the paper description, and extended to the domain of conditional and modal logical reasoning.
 
 ### Contact
 
