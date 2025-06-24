@@ -102,7 +102,23 @@ This work builds upon the experimental framework established by Holliday et al. 
    pip install -r requirements.txt
    ```
 
-3. **Set up API keys (for generating new responses):**
+3. **Configure directory paths:**
+   
+   **For Analysis.py** - Update the directory paths in the script:
+   ```python
+   # Directory paths
+   data_dir = r"C:\your\path\to\data"  # Path to your data directory
+   output_dir = r"C:\your\path\to\output"  # Path where results will be saved
+   ```
+
+   **For COL-response-generator.py** - Update the paths in the `main()` function:
+   ```python
+   def main():
+       base_path = r"C:\your\project\path"  # Base path for your project
+       prompts_base_path = r"C:\your\path\to\prompts"  # Path to JSON prompt files
+   ```
+
+4. **Set up API keys (for generating new responses):**
    Edit the API key variables in `COL-response-generator.py`:
    ```python
    OPENAI_API_KEY = 'your_openai_key_here'
@@ -264,7 +280,9 @@ MIT License - see LICENSE file for details.
 1. **Missing prompt files**: Ensure JSON prompt files are in the correct directory structure
 2. **API rate limits**: The response generator includes rate limiting (1 second delays)
 3. **API key errors**: Verify API keys are correctly set in `COL-response-generator.py`
-4. **Path issues**: Update file paths in both scripts to match your directory structure
+4. **Path configuration errors**: Ensure all directory paths are correctly set in both `Analysis.py` and `COL-response-generator.py`
+   - Update `data_dir` and `output_dir` in `Analysis.py`
+   - Update `base_path` and `prompts_base_path` in `COL-response-generator.py`
 5. **Missing dependencies**: Run `pip install -r requirements.txt` to install all required packages
 
 **Data Quality Notes:**
