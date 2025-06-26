@@ -1,0 +1,101 @@
+================================================================================
+CONDITIONAL AND MODAL REASONING: PROMPTING METHOD ANALYSIS
+================================================================================
+Total responses analyzed: 26902
+Valid responses: 13706
+Overall validity rate: 50.95%
+Overall accuracy: 28.43%
+Total logical rules tested: 17
+Total models tested: 3
+
+PERFORMANCE BY PROMPTING METHOD:
+------------------------------------------------------------
+Chain Of Logic      : 0.850 ± 0.353 (85.0%)
+Chain Of Thought    : 0.645 ± 0.345 (64.5%)
+Few-Shot            : 0.197 ± 0.264 (19.7%)
+Zero-Shot           : 0.297 ± 0.276 (29.7%)
+
+CHAIN OF LOGIC PERFORMANCE ANALYSIS:
+------------------------------------------------------------
+Chain of Logic Accuracy:     0.850 (85.0%)
+Best Baseline (Chain Of Thought): 0.645 (64.5%)
+Absolute Improvement:        +0.205 (20.5%)
+Relative Improvement:        +31.8%
+
+STATISTICAL SIGNIFICANCE TESTS:
+------------------------------------------------------------
+Chain of Logic vs Chain Of Thought:
+  t-test: p=0.0066 **, d=0.588
+  Mann-Whitney: p=0.0000 ***
+
+Chain of Logic vs Few-Shot:
+  t-test: p=0.0000 ***, d=2.108
+  Mann-Whitney: p=0.0000 ***
+
+Chain of Logic vs Zero-Shot:
+  t-test: p=0.0000 ***, d=1.761
+  Mann-Whitney: p=0.0000 ***
+
+LOGICAL RULE DIFFICULTY RANKING (Easiest to Hardest):
+------------------------------------------------------------
+ 1. CMP     : 0.707 (70.7%) ± 0.343
+ 2. CONV    : 0.694 (69.4%) ± 0.378
+ 3. MP      : 0.693 (69.3%) ± 0.400
+ 4. DA      : 0.655 (65.5%) ± 0.397
+ 5. INV     : 0.652 (65.2%) ± 0.407
+ 6. MT      : 0.633 (63.3%) ± 0.353
+ 7. AC      : 0.628 (62.8%) ± 0.412
+ 8. NSFC    : 0.602 (60.2%) ± 0.375
+ 9. DSmi    : 0.581 (58.1%) ± 0.394
+10. MuDistOr: 0.457 (45.7%) ± 0.365
+11. MiAg    : 0.445 (44.5%) ± 0.356
+12. MTmi    : 0.424 (42.4%) ± 0.374
+13. WSFC    : 0.296 (29.6%) ± 0.273
+14. DSmu    : 0.266 (26.6%) ± 0.444
+15. MTmu    : 0.069 (6.9%) ± 0.123
+16. CT      : 0.051 (5.1%) ± 0.102
+
+MOST CHALLENGING RULES:
+------------------------------------------------------------
+DSmu: 26.6% accuracy - High difficulty across all prompting methods
+MTmu: 6.9% accuracy - High difficulty across all prompting methods
+CT: 5.1% accuracy - High difficulty across all prompting methods
+
+RULES WHERE CHAIN OF LOGIC SHOWS BIGGEST ADVANTAGES:
+------------------------------------------------------------
+DSmu: +0.979 improvement (97.9%)
+MuDistOr: +0.724 improvement (72.4%)
+MTmi: +0.704 improvement (70.4%)
+MiAg: +0.679 improvement (67.9%)
+DSmi: +0.559 improvement (55.9%)
+
+KEY FINDINGS:
+------------------------------------------------------------
+1. Chain of Logic shows statistically significant improvements over: Chain Of Thought, Few-Shot, Zero-Shot
+2. Chain of Logic ranks #1 out of 4 prompting methods
+3. Large effect sizes (d ≥ 0.8) found for: 2 comparisons
+4. Medium effect sizes (d ≥ 0.5) found for: 1 comparisons
+5. Note: Limited data for 405B model due to API issues during data collection
+
+RESEARCH IMPLICATIONS:
+------------------------------------------------------------
+• Chain of Logic prompting represents a methodological advancement
+• Systematic improvements across multiple logical reasoning tasks
+• Particular effectiveness for complex conditional and modal reasoning
+• Demonstrates importance of structured logical reasoning frameworks
+
+FILES GENERATED:
+------------------------------------------------------------
+CSV Files:
+- detailed_results.csv: Complete response data
+- summary_statistics.csv: Aggregated performance metrics
+- condition_performance.csv: Performance by prompting method
+- condition_rule_performance.csv: Performance by method and rule
+- rule_difficulty.csv: Rule difficulty rankings
+- statistical_comparisons.csv: Statistical test results
+
+Visualizations:
+- main_prompting_comparison.png: Primary method comparison
+- prompting_rule_heatmap.png: Detailed performance matrix
+- chain_logic_improvement_analysis.png: Improvement analysis
+- rule_difficulty_ranking.png: Rule difficulty visualization
